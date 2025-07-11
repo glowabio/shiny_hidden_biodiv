@@ -89,12 +89,36 @@ server <- function(input, output, session) {
   # Track if welcome modal has been shown
   show_once <- reactiveVal(TRUE)
   
+  # Text welcome modal
+  text_modal <- div(
+    class = "text-center",
+    img(src = "logo.png", height = "100px", style = "margin-bottom: 1rem;"),
+    tags$h4("Welcome to the Hidden Biodiversity Tracker"),
+    HTML("
+      <p>
+        This project showcases examples of biodiversity that are often overlooked, 
+        categorized across different dimensions — such as taxonomic, functional, spatial, 
+        temporal, and social — and visualized using interactive tools.
+      </p>
+      <p>
+        Use the map to explore where these hidden biodiversity examples are located, 
+        and the sunburst chart to understand how they relate to different dimensions 
+        and contexts.
+      </p>
+      <hr>
+      <p>
+        <strong>Contribute your knowledge:</strong> Use the <span style='color:#006d5b; font-weight:bold;'>gear icon</span> 
+        at the top right of the screen to submit your own example of hidden biodiversity. 
+        Your contribution helps build a richer and more inclusive understanding of life on Earth.
+      </p>
+    ")
+  )
   # Show on first load
   observe({
     if (show_once()) {
       showModal(modalDialog(
-        title = "Welcome to the Hidden Biodiversity Tracker",
-        HTML("<p>This project showcases examples of biodiversity that are often overlooked, categorized by dimension, and visualized with interactive tools. Use the map and chart below to explore!</p>"),
+        title = NULL,
+        text_modal,
         easyClose = TRUE
       ))
       show_once(FALSE)  # Don't show again unless manually triggered
@@ -104,8 +128,8 @@ server <- function(input, output, session) {
   # Also show when home icon is clicked
   observeEvent(input$open_home_modal, {
     showModal(modalDialog(
-      title = "Welcome to the Hidden Biodiversity Tracker",
-      HTML("<p>This project showcases examples of biodiversity that are often overlooked, categorized by dimension, and visualized with interactive tools. Use the map and chart below to explore!</p>"),
+      title = NULL,
+      text_modal,
       easyClose = TRUE
     ))
   })
