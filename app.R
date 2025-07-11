@@ -86,6 +86,22 @@ server <- function(input, output, session) {
   sunburstServer("sunburst", biodiv_graph)
   submitServer("submit")
   
+  # Track if welcome modal has been shown
+  show_once <- reactiveVal(TRUE)
+  
+  # Show on first load
+  observe({
+    if (show_once()) {
+      showModal(modalDialog(
+        title = "Welcome to the Hidden Biodiversity Tracker",
+        HTML("<p>This project showcases examples of biodiversity that are often overlooked, categorized by dimension, and visualized with interactive tools. Use the map and chart below to explore!</p>"),
+        easyClose = TRUE
+      ))
+      show_once(FALSE)  # Don't show again unless manually triggered
+    }
+  })
+  
+  # Also show when home icon is clicked
   observeEvent(input$open_home_modal, {
     showModal(modalDialog(
       title = "Welcome to the Hidden Biodiversity Tracker",
@@ -94,6 +110,7 @@ server <- function(input, output, session) {
     ))
   })
 }
+
 
 shinyApp(ui, server)
 
