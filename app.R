@@ -96,7 +96,7 @@ server <- function(input, output, session) {
     tags$h4("Welcome to the Hidden Biodiversity Tracker"),
     HTML("
       <p>
-        This project showcases examples of biodiversity that are often overlooked, 
+        This app showcases examples of biodiversity that are often overlooked, 
         categorized across different dimensions — such as taxonomic, functional, spatial, 
         temporal, and social — and visualized using interactive tools.
       </p>
