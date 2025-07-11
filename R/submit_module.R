@@ -74,13 +74,33 @@ submitUI <- function(id) {
 submitServer <- function(id) {
   moduleServer(id, function(input, output, session) {
     observeEvent(input$submit_btn, {
+      # Create data frame from inputs
+      entry <- data.frame(
+        timestamp = Sys.time(),
+        dimension = input$dimension,
+        what_hidden = input$what_hidden,
+        why_hidden = input$why_hidden,
+        why_relevant = input$why_relevant,
+        reference = input$doi,
+        stringsAsFactors = FALSE
+      )
+      
+      # Create data/ folder if it doesn't exist
+      if (!dir.exists("data")) dir.create("data")
+      
+      # Generate safe file name with current time
+      file_name <- paste0("submission_", format(Sys.time(), "%Y-%m-%d_%H-%M-%S"), ".csv")
+      file_path <- file.path("data", file_name)
+      
+      # Write to new uniquely named file
+      write.csv(entry, file_path, row.names = FALSE)
+      
+      # Show confirmation
       showModal(modalDialog(
         title = "Entry Submitted",
         "Thank you for contributing!",
         easyClose = TRUE
       ))
-      
-      # You can add logic here to append to a data.frame or write to a file
     })
   })
 }

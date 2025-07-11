@@ -92,7 +92,7 @@ sunburstServer <- function(id, data) {
             )
           )
         ) %>%
-        hc_title(text = "Dimensions of Hidden Biodiversity")
+        hc_title(text = "")
     })
     
     # Observe clicks and show modal
