@@ -1,6 +1,6 @@
-# Hidden Biodiversity Explorer
+# Hidden Biodiversity Tracker
 
-**Hidden Biodiversity Explorer** is an interactive Shiny app that showcases examples of biodiversity that are often overlooked or underrepresented in research, conservation, and public awareness. These examples are categorized across multiple dimensions — **taxonomic**, **functional**, **spatial**, **temporal**, and **social** — and visualized using intuitive tools designed to reveal complex patterns in biodiversity data.
+**Hidden Biodiversity Tracker** is an interactive Shiny app that showcases examples of biodiversity that are often overlooked or underrepresented in research, conservation, and public awareness. These examples are categorized across multiple dimensions — **taxonomic**, **functional**, **spatial**, **temporal**, and **social** — and visualized using intuitive tools designed to reveal complex patterns in biodiversity data.
 
 ## Explore Hidden Biodiversity
 
