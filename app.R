@@ -97,8 +97,8 @@ server <- function(input, output, session) {
     HTML("
       <p>
         This app showcases examples of biodiversity that are often overlooked, 
-        categorized across different dimensions — such as taxonomic, functional, spatial, 
-        temporal, and social — and visualized using interactive tools.
+        categorized across different dimensions — such as taxonomic, functional, genetic, spatial, 
+        temporal, methodological and social — and visualized using interactive tools.
       </p>
       <p>
         Use the map to explore where these hidden biodiversity examples are located, 
