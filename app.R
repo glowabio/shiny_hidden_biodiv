@@ -111,7 +111,10 @@ server <- function(input, output, session) {
         at the top right of the screen to submit your own example of hidden biodiversity. 
         Your contribution helps build a richer and more inclusive understanding of life on Earth.
       </p>
-    ")
+    "),
+    p(modalDialogUI("privacy"),
+      align = "center"
+    )
   )
   # Show on first load
   observe({
@@ -133,6 +136,10 @@ server <- function(input, output, session) {
       easyClose = TRUE
     ))
   })
+  
+  # server function of the modal dialogue module. It shows privacy police
+  modalDialogServer("privacy")
+  
 }
 
 
