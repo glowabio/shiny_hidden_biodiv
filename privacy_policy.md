@@ -21,16 +21,11 @@ accordance with this policy.
 
 __Information collection and use__
 
-We do not employ cookies or collect any personal information of visitors. Any 
-data uploaded by users are assigned a random identifier such that each database 
-query of the network or environmental data can be assigned to a specific browsing 
-session. The data is only used to query the database, to map and display the 
-results, to extract the user-specified environmental information and to calculate 
-the network connectivity among points. Any uploaded data is deleted from our 
-servers after the user closes the browser window, alternatively the server 
-session closes (and deletes any user data after 15 min after being idle). 
+We do not employ cookies or collect any personal information of visitors. 
+Any database entry submitted by a user is assigned a random identifier such that
+each database entry remains unique, along with the date and time of the entry. 
 
-_Links To Other Sites_
+__Links To Other Sites__
 
 Our website may contain links to other sites that are not operated by us. If you 
 click on a third party link, you will be directed to that third party's site. We 
@@ -57,7 +52,7 @@ upload, post, transmit, or distribute in any way content available through this
 website, with the exception of public documents such as treaties and conventions.
 
 
-_Possible errors_
+__Possible errors__
 
 While we strive for accuracy, we make no guarantees, warranties and / or other 
 representations about the suitability, reliability, availability, timeliness, or 
