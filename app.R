@@ -12,8 +12,8 @@ ui <- page_fluid(
     version = 5,
     bootswatch = "minty",
     primary = "#006d5b",
-    base_font = font_google("Open Sans"),
-    heading_font = font_google("Montserrat")
+    base_font = 'system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+    heading_font = 'system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
   ),
   
   tags$head(
