@@ -23,7 +23,14 @@ biodivMapServer <- function(id, data) {
     # Render base map
     output$map <- renderLeaflet({
       leaflet(data) |>
-        addProviderTiles("CartoDB.Positron") |>
+        addTiles(
+          urlTemplate = paste0(
+            "https://basemaps.cartocdn.com/rastertiles/light_nolabels/{z}/{x}/{y}.png?key=",
+            # set the key in .Renviron
+            Sys.getenv("CARTO_API_KEY")
+          ),
+          attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution/">CARTO</a>'
+        ) |>
         addCircleMarkers(
           lng = ~longitude,
           lat = ~latitude,
